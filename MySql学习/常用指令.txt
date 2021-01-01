@@ -1,0 +1,53 @@
+1. mysql -u root -p
+Enter password: a375132689
+
+2. show databases;
+
+3. use test;
+
+4. show tables;
+
+5. show tables from mysql;
+
+6. select database(); // 显示当前所在的库
+
+7. drop table stuinfo;
+
+8. mysql> create table stuinfo(
+    -> id int,
+    -> name varchar(20));
+
+9. desc stuinfo; // 查看表结构
+
+10. mysql> insert into stuinfo (id,name) values(1,'join');
+    Query OK, 1 row affected (0.02 sec)
+
+11. select * from stuinfo;
+
+12.  update stuinfo set name='mary' where id = 1;
+    如果id没有被设置为主键，数据库里面允许存在多个id为1的数据，通过此语句会将所有id为1的都更新
+
+13. delete from stuinfo where id = 1;
+
+14. 查看数据库版本的方法：
+    （1）select version(); // 查看数据库的版本
+    
+    （2）PS C:\Users\13751> mysql --version
+        F:\mysql-8.0.21-winx64\bin\mysql.exe  Ver 8.0.21 for Win64 on x86_64 (MySQL Community Server - GPL)
+    （3）PS C:\Users\13751> mysql -V
+        F:\mysql-8.0.21-winx64\bin\mysql.exe  Ver 8.0.21 for Win64 on x86_64 (MySQL Community Server - GPL)
+
+15. mysql> exit
+    Bye     // 退出mysql客户端
+
+16. mysql> create database YGGL1 CHARACTER SET utf8 COLLATE utf8_general_ci;
+    Query OK, 1 row affected, 2 warnings (0.04 sec)
+
+17. show create table employees;
+
+18. alter table employees drop column workyear;
+
+19. mysql> alter table employees alter sex set default '男';
+
+20. mysql> ALTER TABLE employees ALTER sex SET DEFAULT "女" ,DROP COLUMN birthday;
+
